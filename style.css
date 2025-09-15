@@ -1,0 +1,207 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f5e9;
+    text-align: center;
+    padding: 20px;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    color: #004d40;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 30px 0;
+}
+
+.header-info, .player-input, .action-buttons {
+    margin-bottom: 20px;
+    background-color: #f7fcf9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; 
+}
+
+.header-info {
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+input[type="text"], input[type="date"], input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.score-container, .par-input {
+    margin: 20px auto;
+    width: 90%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+thead {
+    background-color: #dcedc8;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.results {
+    margin-top: 30px;
+    font-size: 1.2em;
+    background-color: #f7fcf9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.score-input, .par-input-field {
+    width: 50px;
+    text-align: center;
+}
+
+.fixed-cell {
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    background-color: #dcedc8;
+    font-weight: bold;
+}
+
+.player-name-cell {
+    position: sticky;
+    left: 0;
+    z-index: 5;
+    background-color: #fff;
+    text-align: left;
+    min-width: 80px;
+    font-weight: bold;
+}
+
+.score-table-fixed-header {
+    left: 0;
+    top: 0;
+    background-color: #dcedc8;
+    z-index: 15;
+}
+
+.total-score-cell {
+    font-weight: bold;
+    color: #1a531b;
+    background-color: #e0e0e0;
+}
+
+.half-total-score-cell {
+    font-weight: bold;
+    color: #2e7d32;
+    background-color: #e0e0e0;
+}
+
+.final-results-header {
+    margin-bottom: 20px;
+}
+
+.final-results-header p {
+    margin: 5px 0;
+}
+
+#saved-games-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.saved-games-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.saved-games-content h2 {
+    color: #004d40;
+    margin-bottom: 20px;
+}
+
+#savedGamesList ul {
+    list-style: none;
+    padding: 0;
+}
+
+#savedGamesList li {
+    display: flex;
+    flex-direction: column; /* 세로로 정렬되도록 변경 */
+    justify-content: space-between;
+    align-items: flex-start; /* 왼쪽 정렬 */
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #f7fcf9;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+#savedGamesList li span {
+    flex-grow: 1;
+    text-align: left;
+    margin-bottom: 10px; /* 버튼과 간격 추가 */
+}
+
+#savedGamesList li .button-group {
+    display: flex;
+    gap: 10px;
+}

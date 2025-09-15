@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>골프 스코어 기록</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>⛳️ 골프 스코어 기록</h1>
+
+    <div id="main-app">
+        <div class="header-info">
+            <label for="dateInput">날짜:</label>
+            <input type="date" id="dateInput">
+            <label for="courseNameInput">골프 코스:</label>
+            <input type="text" id="courseNameInput" placeholder="코스 이름을 입력하세요">
+        </div>
+
+        <hr>
+
+        <div class="par-input">
+            <h3>각 홀의 기준 타수(Par) 입력</h3>
+            <table id="parTable">
+                <tbody id="parTableBody">
+                    </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <div class="player-input">
+            <input type="text" id="playerName" placeholder="플레이어 이름을 입력하세요">
+            <button onclick="addPlayer()">플레이어 추가</button>
+        </div>
+
+        <div class="score-container">
+            <table id="scoreTable">
+                <tbody id="scoreTableBody">
+                    </tbody>
+            </table>
+        </div>
+        
+        <div class="action-buttons">
+            <button onclick="newGame()">새 게임</button>
+            <button onclick="saveGameData()">경기 기록 저장</button>
+            <button onclick="showSavedGames()">경기 기록 불러오기</button>
+        </div>
+
+        <div class="results">
+            <div id="totalScores"></div>
+        </div>
+    </div>
+
+    <div id="saved-games-screen" style="display: none;">
+        <div class="saved-games-content">
+            <h2>저장된 경기 기록</h2>
+            <div id="savedGamesList"></div>
+            <button onclick="closeSavedGamesScreen()">닫기</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
